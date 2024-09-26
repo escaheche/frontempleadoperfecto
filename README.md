@@ -4,7 +4,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to ``. The application will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `https://escaheche.github.io/frontempleadoperfecto/login`. The application will automatically reload if you change any of the source files.
+
+user:"admin"
+pass:"tu_password"
 
 ## Code scaffolding
 
