@@ -1,0 +1,49 @@
+<div class="container mt-5">
+    <!-- Formulario para crear nueva empresa -->
+    <div class="mt-4">
+        <h3>Crear Nueva Empresa</h3>
+        <form (ngSubmit)="crearEmpresa()">
+          <div class="form-group mb-3">
+            <label for="nombre">Nombre</label>
+            <input type="text" class="form-control" id="nombre" [(ngModel)]="nuevaEmpresa.nombre" name="nombre" required>
+          </div>
+          <div class="form-group mb-3">
+            <label for="direccion">Dirección</label>
+            <input type="text" class="form-control" id="direccion" [(ngModel)]="nuevaEmpresa.direccion" name="direccion" required>
+          </div>
+          <div class="form-group mb-3">
+            <label for="rut">RUT</label>
+            <input type="text" class="form-control" id="rut" [(ngModel)]="nuevaEmpresa.rut" name="rut" required>
+          </div>
+          <div class="form-group mb-3">
+            <label for="telefono">Teléfono</label>
+            <input type="text" class="form-control" id="telefono" [(ngModel)]="nuevaEmpresa.telefono" name="telefono" required>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Crear Empresa</button>
+        </form>
+      </div>
+    <h2 class="mb-4">Mis Empresas</h2>
+  
+    <!-- Lista de empresas -->
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Dirección</th>
+          <th>RUT</th>
+          <th>Teléfono</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let empresa of empresas">
+          <td>{{ empresa.nombre }}</td>
+          <td>{{ empresa.direccion }}</td>
+          <td>{{ empresa.rut }}</td>
+          <td>{{ empresa.telefono }}</td>
+        </tr>
+      </tbody>
+    </table>
+  
+    
+  </div>
+  

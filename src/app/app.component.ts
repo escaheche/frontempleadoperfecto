@@ -1,13 +1,20 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';  // Importa el servicio Router
+import { NavbarComponent } from './navbar/navbar.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [NavbarComponent,CommonModule, RouterModule],  // Asegúrate de que NavbarComponent esté importado
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'tu_empleado_perfecto';
+  constructor(private router: Router) {}
+
+  // Método para verificar si estamos en la página de login
+  isLoginPage(): boolean {
+    return this.router.url === '/login';
+  }
 }
